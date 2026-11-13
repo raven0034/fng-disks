@@ -20,7 +20,7 @@ SOCKET_SRC = $(COMMON_DIR)/unix-socket.c
 COMMON_HDRS = $(addprefix $(COMMON_DIR)/,unix-socket.h removable-protocol.h fng-common.h)
 
 .PHONY: all clean test test-sanitise test-namespace check-scripts
-all: $(BUILD_DIR)/removable-bridge $(BUILD_DIR)/fng-disks $(BUILD_DIR)/mountinject test test-namespace
+all: $(BUILD_DIR)/removable-bridge $(BUILD_DIR)/fng-disks $(BUILD_DIR)/mountinject test test-namespace test-sanitise check-scripts
 
 $(BUILD_DIR):
 	mkdir -p $@
